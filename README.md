@@ -1,5 +1,7 @@
 # CBs Dotfiles
 
+These are my dotfiles. Currently (2021-05-31) there are not many files but I try to add more and more over time. Feel free to take what you need. If you find an error, [please let me know](issues). 
+
 ## What Are Dotfiles?
 
 Dotfiles are the customization files that are used to personalize your Linux or other Unix-based system. You can tell that a file is a dotfile because the name of the file will begin with a period–a dot! The period at the beginning of a filename or directory name indicates that it is a hidden file or directory. This repository contains my personal dotfiles. They are stored here for convenience so that I may quickly access them on new machines or new installs. Also, others may find some of my configurations helpful in customizing their own dotfiles.
