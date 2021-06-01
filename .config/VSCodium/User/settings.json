@@ -1,0 +1,116 @@
+{
+    // vscode settings
+
+    // --**DISABLE TELEMETRY--**
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    // Basic VS settings
+    "window.zoomLevel": 1,
+    "workbench.iconTheme": "ayu",
+    "workbench.colorTheme": "Visual Studio Light",
+    "editor.fontSize": 15,
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.fontFamily": "'Nunito',-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+    
+    // workbench things - update this for startpage
+    "workbench.startupEditor": "newUntitledFile",
+    "files.encoding": "utf8",
+    // unix line endings
+    "files.eol": "\n",
+    // editor ruler at 80 and 120
+    "editor.rulers": [80, 120],
+    // disable annoying recommendations
+    "extensions.ignoreRecommendations": true,
+    // edit settings as json 
+    "workbench.settings.editor": "json",
+    
+    // **--INTELLISENSE--**
+    "editor.snippetSuggestions": "top",
+    // enable tab completion for snippets
+    "editor.tabCompletion": "on",
+    // suggests snippets as you type
+    "editor.suggestOnTriggerCharacters": true,
+    // enable quick suggestions
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": true
+    },
+    "editor.suggestSelection": "first",
+
+    // **--GO LINT--**
+    "go.lintTool": "golangci-lint",
+    // go lint all workspace, this is food for source code review
+    // other options are "off" or "package"
+    "go.lintOnSave": "package",
+    // enable auto population of function pa
+    "go.useCodeSnippetsOnFunctionSuggest": true, 
+    // increase time out for running test
+    "go.testTimeout": "60s",
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+
+    // **--MARKDOWN--**
+    "[markdown]": {
+        "editor.wordBasedSuggestions": true,
+        "editor.dragAndDrop": false,
+        "editor.quickSuggestions": true,
+        "editor.snippetSuggestions": "top",
+        "editor.wordWrap": "on",
+    },
+
+
+    // **--MARKDOWN ALL IN ONE--**
+    "markdown.extension.toc.slugifyMode": "github",
+    "markdown.extension.toc.updateOnSave": true,
+    "markdown.extension.list.indentationSize": "inherit",
+    // Convert toc to lowercase to work on github and Hugo
+    "markdown.extension.toc.downcaseLink": true,
+    // Use '*' to indictae italic instead of '_'
+    "markdown.extension.italic.indicator": "*",
+    // We do not use firtlevel in markdown
+
+    // **--MARKDOWNLINT--**
+    "markdownlint.config": {
+        "MD022": false, // MD022 blanks-around-headings
+        "MD032": false, // MD032 blanks-around-lists
+        "MD007": false, // MD007 ul-indent
+        "MD010": false  // MD010 no-hard-tabs
+    },
+ 
+    // **--MARKDOWN NOTES--**
+    "vscodeMarkdownNotes.workspaceFilenameConvention": "relativePaths",
+    "vsnotes.defaultNoteTitle": "{title}.{ext}",
+    "vsnotes.templates": [
+        "note",
+    ],
+    "vsnotes.defaultSnippet": {
+        "langId": "markdown",
+        "name": "vsnote_template_note"
+    },
+    // Convert spaces in title to this
+    "vsnotes.noteTitleConvertSpaces": "-",
+
+    
+    // **--GIT--**
+    // Uncomment to disable git
+    // "git.enabled": false,
+    // "git.path": null,
+    // "git.autofetch": false,
+    
+    // **--GITLENSE--**
+    // disable some gitlense gibberish
+    "gitlens.codeLens.recentChange.enabled": false,
+    "gitlens.codeLens.authors.enabled": false,
+
+    // **--MISC--**
+    "pasteImage.showFilePathConfirmInputBox": true,
+    "cSpell.language": "en,de",
+    "cSpell.userWords": [
+        "codecaption",
+        "codefence",
+        "imgcap"
+    ],
+
+}
