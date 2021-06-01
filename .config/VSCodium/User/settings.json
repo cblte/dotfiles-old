@@ -8,7 +8,7 @@
     // Basic VS settings
     "window.zoomLevel": 1,
     "workbench.iconTheme": "ayu",
-    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.colorTheme": "Ayu Mirage Bordered",
     "editor.fontSize": 15,
     "markdown.preview.fontSize": 16,
     "markdown.preview.fontFamily": "'Nunito',-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
