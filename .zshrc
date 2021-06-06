@@ -71,17 +71,31 @@ bindkey '^H' backward-kill-word                                 # delete previou
 bindkey '^[[Z' undo                                             # Shift+tab undo last action
 
 ## Alias section 
+alias vim="nvim"
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 alias gitu='git add . && git commit && git push'
 
-# Theming section  
+alias ls='ls -al --color=always --group-directories-first' # my preferred listing
+alias la='ls -a --color=always --group-directories-first'  # all files and dirs
+alias ll='ls -l --color=always --group-directories-first'  # long format
+alias lt='ls -aT --color=always --group-directories-first' # tree listing
+
+# Changing "ls" to "exa"
+if [[ -e /usr/bin/easdxa ]]; then
+  alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+  alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+  alias ll='exa -l --color=always --group-directories-first'  # long format
+  alias lt='exa -aT --color=always --group-directories-first' # tree listing
+fi
+
+## Theming section  
 autoload -U compinit colors zcalc
 compinit -d
 colors
 
-# Color man pages
+## Color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
 export LESS_TERMCAP_md=$'\E[01;32m'
 export LESS_TERMCAP_me=$'\E[0m'
