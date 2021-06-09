@@ -1,17 +1,17 @@
-# 
+#
 #   ██████╗██████╗    Carsten Brueggenolte
 #  ██╔════╝██╔══██╗   https://zn80.net
 #  ██║     ██████╔╝   https://github.com/cblte
 #  ██║     ██╔══██╗
 #  ╚██████╗██████╔╝
-#   ╚═════╝╚═════╝ 
-#                 
-# My .zshrc config. Not much to see here. 
+#   ╚═════╝╚═════╝
 #
-# This config has been update to work 
+# My .zshrc config. Not much to see here.
+#
+# This config has been update to work
 # with my macOS Catalina installation
 #
-# Please see README.md for instructions on how to 
+# Please see README.md for instructions on how to
 # install the used plugins
 # -------------------------------------------------------------------
 
@@ -133,6 +133,12 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
+
+## the NULL pointer of envs.sh
+0file() { curl -F"file=@$1" https://envs.sh ; }
+0pb() { curl -F"file=@-;" https://envs.sh ; }
+0url() { curl -F"url=$1" https://envs.sh ; }
+0short() { curl -F"shorten=$1" https://envs.sh ; }
 
 
 ## Function section
