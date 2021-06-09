@@ -72,22 +72,22 @@ setopt notify                                                   # Report the sta
 
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
-## History Configuration
+# ----- History Configuration
 HISTFILE=~/.zhistory
 HISTSIZE=10000
 SAVEHIST=10000
 
-## ----- ALIAS Section -----
+# ----- ALIAS Section
 alias vim="nvim"
 alias cp="cp -i"                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
 
-## get top process eating memory
+## Get top process eating memory
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 
-## get top process eating cpu ##
+## Get top process eating cpu ##
 alias pscpu='ps auxf | sort -nr -k 3'
 alias pscpu10='ps auxf | sort -nr -k 3 | head -10'
 
@@ -97,7 +97,7 @@ alias la='ls -aG'  # all files and dirs
 alias ll='ls -lG'  # long format
 alias lt='ls -aTG' # tree listing
 
-# Changing "ls" to "exa" if available
+## Changing "ls" to "exa" if available
 if [[ -e /usr/local/bin/exa ]]; then
   alias ls='exa -al --color=always --group-directories-first' # my preferred listing
   alias la='exa -a --color=always --group-directories-first'  # all files and dirs
@@ -105,7 +105,7 @@ if [[ -e /usr/local/bin/exa ]]; then
   alias lt='exa -aT --color=always --group-directories-first' # tree listing
 fi
 
-## youtube-dl shortcuts
+## youtube-dl aliases
 alias yta-aac="youtube-dl --extract-audio --audio-format aac "
 alias yta-best="youtube-dl --extract-audio --audio-format best "
 alias yta-flac="youtube-dl --extract-audio --audio-format flac "
@@ -116,9 +116,10 @@ alias yta-vorbis="youtube-dl --extract-audio --audio-format vorbis "
 alias yta-wav="youtube-dl --extract-audio --audio-format wav "
 alias ytv-best="youtube-dl -f bestvideo+bestaudio "
 
+## dotfiles alias
 alias dotfiles='/usr/bin/git --git-dir=/Users/cblte/.dotfiles/ --work-tree=/Users/cblte'
 
-## Git Stuff
+## All things git Stuff
 alias gitu='git add . && git commit && git push'
 
 alias addup='git add -u'
@@ -141,8 +142,7 @@ alias newtag='git tag -a'
 0short() { curl -F"shorten=$1" https://envs.sh ; }
 
 
-## Function section
-
+# ----- Function section
 # open manpages in a seperate window
 function xmanpage() { open x-man-page://$@ ; }
 
@@ -190,15 +190,14 @@ fi
 IFS=$SAVEIFS
 
 
-
-## Prompt section
+# ----- Prompt section
 ## install spaceship and starship through brew first!
 ## only uncommment one. Either starship or spaceship!
 
-# Source the awesome starship.rs prompt
+## Source the awesome starship.rs prompt
 # eval "$(starship init zsh)"
 
-# Source the awesome https://spaceship-prompt.sh/ prompt
-# ZSH_THEME="spaceship"
+## Source the awesome https://spaceship-prompt.sh/ prompt
+ZSH_THEME="spaceship"
 autoload -U promptinit; promptinit
 prompt spaceship
