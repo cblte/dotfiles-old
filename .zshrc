@@ -29,13 +29,13 @@ export HISTORY_IGNORE="(ls|cd|pwd|exit|sudo reboot|history|cd -|cd ..)"
 #
 # enable auto-suggestions based on the history
 if [ -f /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
-    #source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     # change suggestion color
-    #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
+    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
 # enable syntax-highlighting
 if [ -f /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]; then
-    #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
 #----- Set VI mode
@@ -56,19 +56,19 @@ if [ -d "$HOME/Applications" ] ;
 fi
 
 # ----- Options section
-# setopt autocd                                                   # if only directory path is entered, cd there.
-# setopt correct                                                  # Auto correct mistakes
-# setopt nobeep                                                   # No beep
-# setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
-# setopt nocaseglob                                               # Case insensitive globbing
+setopt autocd                                                   # if only directory path is entered, cd there.
+setopt correct                                                  # Auto correct mistakes
+setopt nobeep                                                   # No beep
+setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
+setopt nocaseglob                                               # Case insensitive globbing
 # setopt rcexpandparam                                            # Array expension with parameters
 # setopt nocheckjobs                                              # Don't warn about running processes when exiting
-# setopt numericglobsort                                          # Sort filenames numerically when it makes sense
-# setopt appendhistory                                            # Immediately append history instead of overwriting
-# setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
-# setopt inc_append_history                                       # Save commands are added to the history immediately, otherwise only when shell exits.
-# setopt nonomatch                                                # Hide error message if there is no match for the pattern
-# setopt notify                                                   # Report the status of background jobs immediately
+setopt numericglobsort                                          # Sort filenames numerically when it makes sense
+setopt appendhistory                                            # Immediately append history instead of overwriting
+setopt histignorealldups                                        # If a new command is a duplicate, remove the older one
+setopt inc_append_history                                       # Save commands are added to the history immediately, otherwise only when shell exits.
+#setopt nonomatch                                                # Hide error message if there is no match for the pattern
+setopt notify                                                   # Report the status of background jobs immediately
 
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
