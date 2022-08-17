@@ -36,7 +36,7 @@ brew install starship spaceship
 
 After all tools and plugins are installed, please go to this page for instructions on how to clone the repository: 
 
-[The best way to store your dotfiles: A bare Git repository](https://zn80.net/sammelsurium/configs/the-best-way-to-store-your-dotfiles/)
+[The best way to store your dotfiles: A bare Git repository](https://cbrueggenolte.de/sammelsurium/configs/the-best-way-to-store-your-dotfiles/)
 
 
 ## What is in here
